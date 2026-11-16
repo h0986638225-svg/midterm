@@ -1,0 +1,119 @@
+/* 21. 導覽列背景顏色僅佔 80% 頁面寬度，且左右對中 */
+header {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* 11. 設定導覽列背景顏色為 cadetblue */
+nav {
+    background-color: cadetblue;
+    text-align: center; /* 10. 讓兩個按鈕在導覽列中對中 */
+    padding: 10px 0; /* 23. 導覽列按鈕上下不可切齊背景，保留間隔 */
+}
+
+/* 9. nav 中的 ul 的 padding 設為 0 */
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* 1, 2, 3, 8. 導覽列按鈕：圓角、黑底白字、高度 30px、hover 變 blue */
+nav ul li {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    height: 30px;
+    border-radius: 10px;
+    margin: 0 5px;
+}
+
+nav ul li:hover {
+    background-color: blue;
+}
+
+/* 4, 5, 6, 7. 錨點 a 元素：上下左右內填充 5px、cursor: pointer、無底線、文字置中 */
+nav ul li a {
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+    line-height: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* 22. 「關於我」字體大小 42px，左緣比導覽列更內縮 */
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#aboutme {
+    font-size: 42px;
+    margin-left: 10%;
+}
+
+/* 學號、姓名置中顯示 */
+main > p {
+    text-align: center;
+}
+
+/* 25. 修課清單上面的姓名用藍色字 */
+main > p > span:last-child {
+    color: blue;
+}
+
+/* 12, 17, 24. 修課清單並列同一行、頂部對齊、外框 cornflowerblue、左下右下直角 */
+section {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    border: 1px solid cornflowerblue;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-sizing: border-box;
+}
+
+section:first-of-type {
+    margin-right: 4%;
+}
+
+/* 13, 14, 15, 16. 修課清單標題：cadetblue、白字、左上右上圓角 10px、文字對中、斜標置於左上角 */
+section h2 {
+    position: relative;
+    background-color: cadetblue;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 10px;
+}
+
+section h2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 18. 修課清單項目文字：Noto Sans TC、16px、行高 22px、權重 100、替代字體 */
+section ul {
+    font-family: "Noto Sans TC", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 100;
+}
+
+/* 19, 20. 頁腳 ::before 加入 \00a9，靠右對齊選修課框線右緣 */
+footer {
+    width: 80%;
+    margin: 10px auto 0;
+    text-align: right;
+}
+
+footer small::before {
+    content: "\00a9";
+}
